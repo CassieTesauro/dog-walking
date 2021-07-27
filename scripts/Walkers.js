@@ -5,7 +5,7 @@ document.addEventListener(  //element.event listener
     (clickEvent) => { //handler function, responds to the click event
         const itemClicked = clickEvent.target  //variable itemClicked is the target of the click event
         if (itemClicked.id.startsWith("walker")) { //if the user clicks something with an id property value starting with string "walker"
-            const [,walkerId] = itemClicked.id.split("--") //then the id's value will be split into separate strings at the -- character ["walker--1"  ->  "walker--"   "1"   ->  const ["walker--", "1"]  ->  const [, "1"]
+            const [,walkerId] = itemClicked.id.split("--") //then the id's value will be split into separate strings at the -- character ["walker--1"  ->  "walker--"   "1"   ->  const ["walker--", "1"]  ->  const [, "1"]  hint- mainjswalker function -> this module line 27
 
             for (const walker of walkers) { //for each object in the walkers array
                 if (walker.id === parseInt(walkerId)) { //if the object's id value is strictly equal to the number part of the split above 
